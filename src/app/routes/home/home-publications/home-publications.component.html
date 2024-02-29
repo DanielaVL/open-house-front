@@ -17,7 +17,7 @@
 
       <mat-card-actions>
         <button mat-button color="primary">Me gusta</button>
-        <button mat-button id="1" color="primary">Mensaje</button>
+        <button mat-button id="1" color="primary" (click)="addComment(post.id, i)">Mensaje</button>
       </mat-card-actions>
 
       <div class="comments-section">
