@@ -16,7 +16,8 @@
       <div>
 
       <div>
-        <button mat-button id="" color="primary">Me gusta</button>
+        <!-- <mat-icon svgIcon="thumbs-up" style="color: black;" aria-hidden="false" aria-label="Example thumbs up SVG icon"></mat-icon> -->
+        <button mat-button color="primary">Me gusta</button>
         <button mat-button id="1" color="primary">Mensaje</button>
       <div>
 
@@ -27,7 +28,7 @@
         </mat-list>
 
         <div class="text-comments">
-          <button mat-button id="2" color="primary" (click)="addComment(post.id, i)">Otro comentario</button>
+          <button mat-button id="2" color="primary" (click)="addComment(post.id, i)">Comentario</button>
           <div class="add-comment">
             <mat-form-field class="comment-input">
               <textarea matInput placeholder="Texto modificado..." [(ngModel)]="newCommentChanged[i.toString()]"></textarea>
