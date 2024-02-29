@@ -25,9 +25,8 @@
 		
         </mat-list>
 
-        <button mat-button id="2" color="secondary" (click)="addComment(post.id, i)">Otro comentario</button>
-
         <div class="text-comments">
+          <button mat-button id="2" color="primary" (click)="addComment(post.id, i)">Otro comentario</button>
           <div class="add-comment">
             <mat-form-field class="comment-input">
               <textarea matInput placeholder="Texto modificado..." [(ngModel)]="newCommentChanged[i.toString()]"></textarea>
