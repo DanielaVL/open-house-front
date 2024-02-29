@@ -3,10 +3,10 @@
       <div>
         <mat-card-header>
           <div mat-card-avatar class="post-author-image-changed">
-            <img [src]="post.imgUserPost" alt="Imagen de usuario modificada">
+            <img mat-card-avatar [src]="post.imgUserPost" alt="Imagen de usuario modificada">
           </div>
-          <mat-card-title>{{ post.userPost }} Modificado</mat-card-title>
-          <mat-card-subtitle>{{ post.resume }}</mat-card-subtitle>
+          <mat-card-subtitle>{{ post.userPost }}</mat-card-subtitle>
+          <mat-card-title>{{ post.resume }}</mat-card-title>
         </mat-card-header>
 
         <img mat-card-image [src]=post.imgPost alt="Imagen modificada" class="post-product-image">
@@ -24,17 +24,19 @@
           <mat-list>
             <mat-list-item *ngFor="let comment of post.commentPeople">
               <div mat-line>{{ comment.name }}</div>
-              <div mat-line>{{ comment.timeComment }}</div>
+              <div mat-line>
+                <span style="font-size: 0.875em; font-weight: 400; color: gray;">{{ comment.timeComment }}</span>
+              </div>
             </mat-list-item>
           </mat-list>
 
           <div class="text-comments">
-            <button mat-button id="2" color="primary" (click)="addComment(post.id, i)">Comentario</button>
             <div class="add-comment">
               <mat-form-field class="comment-input">
                 <textarea matInput placeholder="Añade un comentario..." [(ngModel)]="newCommentChanged[i.toString()]"></textarea>
               </mat-form-field>
             </div>
+            <button mat-button id="2" color="primary" (click)="addComment(post.id, i)">Comentario</button>
           </div>
         </div>
       </div>
